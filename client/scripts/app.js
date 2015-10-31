@@ -46,7 +46,7 @@ $( document ).ready(function() {
 
   var getQuery = function(callback) {
     $.ajax({
-      url: 'http:127.0.0.1:3000/classes/messages',
+      url: '/classes/messages',
       type: 'GET',
       success: function(data) {
         callback(data.results);
@@ -78,7 +78,7 @@ $( document ).ready(function() {
 
     newRoom = newRoom || false;
     $.ajax({
-      url: 'http:127.0.0.1:3000/classes/messages',
+      url: '/classes/messages',
       type: 'POST',
       data: JSON.stringify(message),
       contentType: 'application/json',
